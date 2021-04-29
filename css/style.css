@@ -1,0 +1,111 @@
+/*regras de font-size------------------------------------------------*/
+/*@media (max-width: 1080px){
+  html{
+    font-size: 93.75%;// equivale a 15px - isso diminue o tamnho da fonte quando a tela for menor que 1080px
+  }
+}
+@media (max-width: 720px){
+  html{
+    font-size: 87.5%;// equivale a 14px - isso diminue o tamnho da fonte quando a tela for menor que 720px
+  }
+}*/
+
+/*Curso HTML5, CSS e JS*/
+@charset "UTF-8";
+*{margin: 0; padding: 0; box-sizing: border-box;}
+body{font-family: 'Roboto', sans-serif; font-weight: 300; color: rgb(82, 82, 82); /*padding: 1%;*/}
+h1{font-weight: 600;}
+h2, h3{font-weight: 500;}
+p{font-weight: 300;}
+button{cursor: pointer;}
+
+.clear-fix::after{content:' '; display: block; clear: both;}
+
+/***************************************************************************/
+
+.calcMain{
+  margin: 50px auto;
+  padding: 1.5rem;
+  width: 360px;
+
+  background-color: rgb(67, 117, 145);
+  border-radius: .5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows:auto repeat(5, 70px);
+  grid-gap: .5rem;
+
+}
+
+.display{
+  background-color: #fff;
+  padding: .5rem;
+  text-align: right;
+  box-sizing: border-box;
+  font-size: 2.8rem;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+  color: rgb(47, 103, 136);
+
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 2;
+
+  box-shadow:  inset 3px 2px 0 white;
+
+  border-bottom: 1px solid rgb(184, 184, 184);
+  border-right: 1px solid rgb(184, 184, 184);
+
+  background-image: linear-gradient(rgb(184, 184, 184), rgb(230, 230, 230));
+}
+
+.calcMain button{
+  display: flex;
+  justify-content: center;
+  align-items: center ;
+
+  font-weight: 350px;
+  font-size: 1.5rem;
+  color: rgb(83, 83, 83);
+  background-image: linear-gradient(rgb(231, 231, 231), rgb(255, 255, 255));
+
+  text-transform: uppercase;
+  border-radius: 3px;
+  border: 1px solid rgb(184, 184, 184);
+}
+
+.calcMain button:nth-child(2){
+  font-size: 1.7rem;
+}
+
+.calcMain button:nth-child(17){
+  background-image: linear-gradient(rgb(153, 153, 153), rgb(173, 173, 173));
+
+  box-shadow:  inset 3px 2px 0 white;
+  border-bottom: 1px solid rgb(184, 184, 184);
+  border-right: 1px solid rgb(184, 184, 184);
+
+  color: rgb(83, 83, 83);
+
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 5;
+  grid-row-end: 7;
+}
+
+.calcMain button:nth-child(18){
+  background-image: linear-gradient(rgb(153, 153, 153), rgb(173, 173, 173));
+
+  box-shadow:  inset 3px 2px 0 white;
+  border-bottom: 1px solid rgb(184, 184, 184);
+  border-right: 1px solid rgb(184, 184, 184);
+
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 6;
+  grid-row-end: 7;
+}
